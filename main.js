@@ -78,14 +78,14 @@ function collisionDetection() {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#c7d128";
   ctx.fill();
   ctx.closePath();
 }
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#e34bc5";
   ctx.fill();
   ctx.closePath();
 }
@@ -99,7 +99,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#8828d1";
         ctx.fill();
         ctx.closePath();
       }
@@ -113,12 +113,13 @@ function drawScore() {
 }
 function drawLives() {
   ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#33d128";
   ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
   drawBricks();
   drawBall();
   drawPaddle();
